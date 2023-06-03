@@ -13,4 +13,20 @@ def get_distance(city1, country1, city2, country2, service_type):
 
     return haversine(lat1, lon1, lat2, lon2)
 
-print(get_distance('Lima', 'Peru', 'Buenos Aires', 'Argentina', 'API'))
+
+def main():
+    ciudad1 = input('Ingrese la ciudad 1: ')
+    pais1 = input('Ingrese el país 1: ')
+
+    ciudad2 = input('Ingrese la ciudad 2: ')
+    pais2 = input('Ingrese el país 2: ')
+
+    tipo_servicio = input('Ingrese el tipo de servicio(CSV, API, Mock): ')
+    print("Distancia:",get_distance(ciudad1, pais1, ciudad2, pais2, tipo_servicio))
+
+    # Valores de prueba
+    #print(get_distance('Lima', 'Peru', 'Buenos Aires', 'Argentina', 'CSV'))
+    #print(get_distance('Lima', 'Peru', 'Buenos Aires', 'Argentina', 'API'))
+    #print(get_distance('Lima', 'Peru', 'Buenos Aires', 'Argentina', 'Mock'))
+
+main()
